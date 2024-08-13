@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom In The World Classification - Input</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .input-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .input-section h2 {
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            font-size: 1.25rem;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="input-section">
+        <div class="container">
+            <h2>Enter the Values</h2>
+            <div class="form-container">
+                <form action="{{ url_for('predict') }}" method="post">
+                    <div class="form-group">
+                        <label for="pr_rating">PR Rating:</label>
+                        <input type="number" class="form-control" id="pr_rating" name="pr_rating" min="1" max="7" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cl_rating">CL Rating:</label>
+                        <input type="number" class="form-control" id="cl_rating" name="cl_rating" min="1" max="7" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pr_score">PR Score:</label>
+                        <input type="number" class="form-control" id="pr_score" name="pr_score" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cl_score">CL Score:</label>
+                        <input type="number" class="form-control" id="cl_score" name="cl_score" min="0" max="100" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

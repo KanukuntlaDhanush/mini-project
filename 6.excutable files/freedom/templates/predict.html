@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-xb/3xLYD7vMlhWjB8e68BZC9E9nVl+rWz8a7cZDr4z4f7amLjWYRRYt61y/pX9mQ1kwz0BEBi8BZwWWQtdMsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-h6I9O6cIcbMUzmyWZjKl55Qe0nDBm/Wsc/+goDIZG/aLjMeiXrRzB/8bR5w5d5/xefj5c3UozQYelN99NARiLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="static/Style.css"/>
+</style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>"Freedom is the right to protest for right"-MARTIN LUTHER KING </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Freedom In The World Prediction</h1> 
+  <p> Insights Into The State Of Political and Civil Liberties Around The World.</p> 
+</div>
+
+<div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>
+            <p>Total Score: {{ total_score }}</p>
+        </h2>
+        <h1><b>Freedom in the World Result</b></h1>
+        {% if prediction %}
+            <H1>Country Classification: {{ prediction }}</h1>
+        {% else %}
+            <p>Sorry, there was an error with your submission. Please try again.</p>
+        {% endif %}
+        <br>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

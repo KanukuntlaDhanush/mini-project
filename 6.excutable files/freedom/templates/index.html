@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom In The World Classification</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .hero-section {
+            background: url('/static/assets/img/index.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Increased opacity for better visibility */
+        }
+
+        .hero-section .content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: block; /* Ensures the text stays on one line */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+            display: block; /* Ensures the text stays on one line */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better visibility */
+        }
+
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right-buttons .btn {
+            font-size: 1.25rem;
+            color: white;
+            text-decoration: none;
+            background-color: black;
+            border: 1px solid white;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        .about-section, .contact-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-section h2, .contact-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .about-section p, .contact-section ul {
+            color: #333;
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .contact-section ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contact-section li {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="top-right-buttons">
+            <a href="#about" class="btn btn-primary">About</a>
+            <a href="#contact" class="btn btn-primary">Contact</a>
+            <a href="/input" class="btn btn-primary">Predict</a>
+        </div>
+        <div class="container text-center">
+            <div class="content">
+                <h1>Welcome to Freedom of The World Classification</h1>
+                <p>Insights Into The State Of Political and Civil Liberties Around The World</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About The Project</h2>
+            <p>Based on the Freedom in the World dataset, our project utilized Python to conduct exploratory data analysis (EDA) and applied machine learning techniques such as KNN, SVM, and Naive Bayes to predict whether a country is classified as Free (F), Partly Free (PF), or Not Free (NF). A Flask app was developed to allow the company to make predictions on a web page.</p>
+            <p>The project demonstrates a deep understanding of machine learning techniques and their application to real-world problems, while also highlighting the potential for technology to be used to promote social justice and human rights. Overall, the app has the potential to provide valuable insights into the state of political and civil liberties around the world.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Phone: +91 7780240811</li>
+                <li>Email: info@freedomclassification.com</li>
+                <li>Address: 123 Main Street, Your City, Your Country</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
